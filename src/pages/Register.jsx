@@ -1,3 +1,5 @@
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 import { registerTeam } from "@/supabase/queries/teams";
 import React, { useState } from "react";
 
@@ -39,8 +41,10 @@ const Register = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <main className="min-h-screen bg-black text-zinc-100 px-4 pb-20">
-      <div className="text-center pt-14 mb-14">
+      <div className="text-center pt-24 mb-14">
         <h1 className="text-5xl font-bold tracking-tight text-[#CE1126]">
           Team Registration
         </h1>
@@ -157,6 +161,8 @@ const Register = () => {
         </button>
       </form>
     </main>
+    <Footer/>
+    </>
   );
 };
 
