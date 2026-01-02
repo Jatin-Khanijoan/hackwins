@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import CombinedSpaceAnimation from "@/components/preloader";
 import Hero from "@/components/hero";
+import { ArrowBigRightDash, ArrowRight } from "lucide-react";
 
 const timelineEvents = [
   {
@@ -91,7 +92,7 @@ const LandingPage = () => {
         <Hero />
       </div>
 
-      <div id="about-section" className="bg-black relative min-h-screen overflow-hidden">
+      <div id="about-section" className="bg-[#050505] relative min-h-screen overflow-hidden">
         {/* Subtle Static Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FDC700]/[0.02] to-transparent pointer-events-none" />
 
@@ -160,7 +161,7 @@ const LandingPage = () => {
                 <div className="pt-4">
                   <div className="flex flex-wrap gap-4">
                     <a href="/tracks">
-                      <span className="text-[#FDC700]">▸ <span cl assName="text-white">View all tracks</span></span>
+                      <span className="hover:underline flex items-center gap-2 text-[#FDC700]">View all tracks <ArrowRight /></span>
                     </a>
                   </div>
                 </div>
@@ -174,18 +175,18 @@ const LandingPage = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="lg:col-span-2"
               >
-                <div className="sticky top-24">
-                  <div className="relative overflow-hidden rounded-lg border border-[#CE1126]/30 shadow-lg">
+                <div className="sticky top-24 space-y-3">
+                  <div className="relative overflow-hidden rounded-lg border border-[#CE1126]/30 shadow-lg h-[350px] md:h-[400px]">
                     <img
                       src="/welcome.png"
                       alt="HackWins 2026"
-                      className="w-full h-auto object-cover"
+                      className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   </div>
 
                   {/* Stats Grid Below Image */}
-                  <div className="grid grid-cols-3 gap-3 mt-6">
+                  <div className="grid grid-cols-3 gap-3">
                     <div className="bg-white/5 border border-white/10 rounded p-4 text-center">
                       <div className="text-2xl font-bold text-[#FDC700] mb-1">10</div>
                       <div className="text-xs text-gray-400 uppercase tracking-wide">Days</div>
@@ -206,50 +207,113 @@ const LandingPage = () => {
         </section>
       </div>
 
-      <div id="timeline" className="relative py-20">
-        <section className="relative mx-auto max-w-7xl px-4 md:px-6">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }} className="text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-bold text-[#CE1126] font-benguiat mb-6 drop-shadow-[0_0_10px_rgba(206,17,38,0.6)]">The Narrative Arc</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto font-benguiat tracking-wider text-[#FDC700] drop-shadow-[0_0_5px_rgba(253,199,0,0.5)]">Mission Timeline</p>
-          </motion.div>
-          <div className="space-y-16">
-            {timelineEvents.map((phase, index) => (
-              <motion.div key={phase.day} initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, delay: index * 0.2 }} className="relative border-l-2 border-[#CE1126]/30 pl-8 ml-4 md:ml-0 md:pl-0 md:border-l-0">
-                <div className="flex flex-col md:items-center mb-8">
-                  <div className="bg-[#CE1126] text-white px-6 py-2 rounded-sm font-bold text-xl font-benguiat tracking-widest shadow-[0_0_15px_rgba(206,17,38,0.5)] transform -skew-x-12 inline-block md:mx-auto">
-                    {phase.day}: {phase.title}
-                  </div>
-                  <div className="mt-2 text-[#FDC700] text-lg font-benguiat tracking-wide drop-shadow-[0_0_5px_rgba(253,199,0,0.5)] text-left md:text-center italic">
-                    "{phase.subtitle}"
-                  </div>
-                  <div className="mt-1 text-gray-400 text-base font-mono md:text-center border border-[#CE1126]/30 px-3 py-1 rounded bg-black/50 inline-block md:mx-auto">
-                    {phase.date}
-                  </div>
-                </div>
+      <div id="timeline" className="relative py-24 bg-[#050505] overflow-hidden">
+        {/* Ambient background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#CE1126] opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
 
-                <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
-                  {phase.events.map((event, eventIndex) => (
-                    <motion.div key={eventIndex} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.5, delay: eventIndex * 0.1 }} className="bg-gradient-to-r from-gray-900/80 to-black/80 border-l-4 border-[#CE1126] rounded-r-lg p-6 hover:bg-gray-900/90 transition-all duration-300 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
-                      <div className="flex flex-col md:flex-row md:items-start gap-4">
-                        <div className="text-[#CE1126] font-bold text-lg font-mono whitespace-nowrap min-w-[100px]">{event.time}</div>
-                        <div>
-                          <div className="text-white font-bold text-xl mb-2 font-benguiat tracking-wide">{event.title}</div>
-                          <div className="text-gray-300 text-sm leading-relaxed font-sans">{event.description}</div>
+        <section className="relative mx-auto max-w-7xl px-4 md:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-4xl md:text-6xl font-bold text-[#CE1126] font-benguiat mb-4 drop-shadow-[0_0_15px_rgba(206,17,38,0.5)]">
+              The Narrative Arc
+            </h2>
+            <p className="text-xl text-[#FDC700] font-benguiat tracking-wider opacity-80">
+              Mission Phases & Protocol
+            </p>
+          </motion.div>
+
+          <div className="relative mt-12 md:mt-24">
+            {/* Central Desktop Line */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-gradient-to-b from-transparent via-[#CE1126]/50 to-transparent"></div>
+            {/* Mobile Line */}
+            <div className="md:hidden absolute left-8 h-full w-px bg-gradient-to-b from-transparent via-[#CE1126]/50 to-transparent"></div>
+
+            <div className="space-y-16 md:space-y-32">
+              {timelineEvents.map((phase, index) => (
+                <motion.div
+                  key={phase.day}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.8 }}
+                  className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                    }`}
+                >
+
+                  {/* Spacer for Desktop Alignment */}
+                  <div className="hidden md:block md:w-1/2" />
+
+                  {/* Central Node */}
+                  <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 flex items-center justify-center w-4 h-4 z-20">
+                    <div className="w-3 h-3 rounded-full bg-[#CE1126] shadow-[0_0_10px_#CE1126] relative z-20"></div>
+                    <div className="absolute w-8 h-8 rounded-full bg-[#CE1126]/20 animate-ping"></div>
+                  </div>
+
+                  {/* Content Card */}
+                  <div className={`w-full md:w-1/2 pl-20 md:pl-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"
+                    }`}>
+                    <div className="group relative">
+                      {/* Hover Connector Line (Desktop) */}
+                      <div className={`hidden md:block absolute top-6 h-px w-16 bg-[#CE1126]/30 transition-all duration-500 group-hover:w-full group-hover:bg-[#CE1126]/10 ${index % 2 === 0 ? "right-[-64px]" : "left-[-64px]"
+                        }`}></div>
+
+                      <div className="relative p-6 md:p-8 rounded-lg bg-white/[0.03] border border-white/10 backdrop-blur-md hover:border-[#CE1126]/40 transition-colors duration-300 overflow-hidden">
+
+                        {/* Number Indicator - Alternating Sides */}
+                        <div className={`absolute top-2 md:top-4 text-6xl font-bold font-benguiat opacity-10 select-none text-[#FDC700] ${index % 2 === 0
+                          ? "right-4" // Even Index (Left Card): Box 1 & 3 logic is usually flipped due to reverse?
+                          // Wait: index 0 is Even. Reverse row. Card is on Left. Text Right.
+                          // User wants Box 1 (Index 0) to have number on Right. 
+                          // "1 and 3 box will have number in the card on the right side"
+                          // So YES, Right side.
+                          : "right-4 md:left-4 md:right-auto" // Odd Index (Right Card): Box 2. Normal row. Card Right. Text Left.
+                          // User wants Box 2 to have number on Left.
+                          // So YES, Left side.
+                          }`}>
+                          0{index + 1}
+                        </div>
+
+                        {/* Content Wrapper with padding to avoid number overlap */}
+                        <div className={`relative z-10 ${index % 2 === 0
+                          ? "md:mr-12" // Padding for Number on Right
+                          : "md:ml-12" // Padding for Number on Left
+                          }`}>
+                          <h3 className="text-2xl md:text-3xl font-bold text-white font-benguiat mb-2">
+                            {phase.title}
+                          </h3>
+                          <p className="text-[#CE1126] font-mono text-sm tracking-widest uppercase mb-4">
+                            {phase.date}
+                          </p>
+
+                          <div className="space-y-4">
+                            {phase.events.map((event, i) => (
+                              <div key={i} className={`flex flex-col gap-1 ${index % 2 === 0 ? "md:items-end" : "md:items-start"}`}>
+                                <div className="flex items-center gap-2">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-[#FDC700]"></span>
+                                  <span className="text-gray-200 font-bold">{event.title}</span>
+                                </div>
+                                <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+                                  {event.description}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center mt-24">
-            <h3 className="text-3xl font-bold text-[#CE1126] font-benguiat mb-6 tracking-widest">Ready to enter the gate?</h3>
-            <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto font-medium">Secure your place in the HackWins legacy today.</p>
-            <a href="/register"><Button size="lg" className="px-12 py-6 text-xl bg-[#CE1126] text-white hover:bg-[#A30D1E] font-bold rounded-sm border border-red-500/50 uppercase tracking-widest transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(206,17,38,0.5)]">Register Now</Button></a>
-          </motion.div>
         </section>
       </div>
+
       <div className={`bg-[#131314] ${pageState === "completed" ? "animate-[fadeInLanding_1s_ease-out_1.5s_both]" : ""}`}><Footer /></div>
     </>
   );

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import HackWinsLogo from "./ui/logo";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -11,17 +13,36 @@ const Navbar = () => {
     { href: "/tracks", label: "Tracks" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header className="fixed top-0 z-50 w-full bg-transparent">
       <nav className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
-        {/* Logo on Left */}
-        <Link to="/" className="flex items-center">
-          <span className="text-3xl tracking-widest font-starjout text-yellow-400 drop-shadow-lg hover:text-yellow-300 transition-colors">
-            HackWins
-          </span>
-        </Link>
+        {/* Logo on Left - Hides on scroll but keeps space */}
+        <div className="w-16 h-16">
+          <AnimatePresence>
+            {!scrolled && (
+              <motion.div
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Link to="/" className="flex items-center gap-3 group">
+                  <HackWinsLogo className="w-16 h-16 transition-transform group-hover:scale-110" />
+                </Link>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
 
-        {/* Expandable Navigation Menu - Transform-based for smooth animations */}
+        {/* Expandable Navigation Menu - Always in same position */}
         <div className="relative">
           <div className="flex items-center bg-black/90 backdrop-blur-md rounded-full border border-yellow-400/50 shadow-[0_0_20px_rgba(253,199,0,0.3)] overflow-hidden">
 
