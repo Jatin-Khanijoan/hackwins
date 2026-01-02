@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Tracks from "./pages/Tracks";
 import Rules from "./pages/Rules";
+import Register from "./pages/Register";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/tracks" element={<Tracks />} />
           <Route path="/rules" element={<Rules />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </>
