@@ -23,7 +23,7 @@ const organizerLinks = [
 ];
 
 const socialLinks = [
-  { name: "GDG", imgSrc: "/gdg.png", href: "https://www.instagram.com/gdg.apsit?igsh=ZW9kZnluNXlnY2d1" },
+  { name: "GDG", imgSrc: "/gdg_dark.png", href: "https://www.instagram.com/gdg.apsit?igsh=ZW9kZnluNXlnY2d1" },
 ];
 
 const contactInfo = [
@@ -77,7 +77,7 @@ const Footer = () => {
                     <img
                       src={social.imgSrc}
                       alt={social.name}
-                      className={`${social.isRounded !== false ? 'rounded-full w-10 h-10' : ''} ${social.className || 'w-10 h-10'} object-contain`}
+                      className={`${social.isRounded !== false ? 'rounded-full w-10 h-10' : ''} ${social.className || 'w-60 h-20 -ml-3'} object-contain`}
                     />
                   </a>
                 ))}

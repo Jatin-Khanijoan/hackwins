@@ -5,6 +5,7 @@ import CountdownTimer from "./countdown";
 const Hero = () => {
     return (
         <section className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 py-16 text-center md:px-6 lg:py-24">
+            <motion.img src="./gdg_dark.png" className="w-72"/>
             <motion.h1 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="text-balance text-3xl font-semibold leading-tight tracking-wide md:text-4xl lg:text-5xl mt-10 text-yellow-400 font-benguiat">A signal from the other side</motion.h1>
             <motion.h2 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="text-xl leading-tight tracking-wide md:text-3xl lg:text-4xl mt-6 text-white font-benguiat relative">
                 Decipher the warning <br />

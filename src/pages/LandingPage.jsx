@@ -17,7 +17,8 @@ const timelineEvents = [
       {
         time: "Kickoff",
         title: "Problem Statement Reveal",
-        description: "Release of Problem Statements. Announcement of rules, timelines, and winning strategies. Teams begin building immediately.",
+        description:
+          "Release of Problem Statements. Announcement of rules, timelines, and winning strategies. Teams begin building immediately.",
       },
     ],
   },
@@ -30,7 +31,8 @@ const timelineEvents = [
       {
         time: "Workshop",
         title: "Build-Up Workshop",
-        description: "Hands-on exposure to Google’s latest tools: Google Gemini, Project IDX / Antigravity (AI-powered IDE).",
+        description:
+          "Hands-on exposure to Google’s latest tools: Google Gemini, Project IDX / Antigravity (AI-powered IDE).",
       },
     ],
   },
@@ -43,7 +45,8 @@ const timelineEvents = [
       {
         time: "Finale",
         title: "Final Presentations",
-        description: "Qualified teams present their solutions. Judging and announcement of winners.",
+        description:
+          "Qualified teams present their solutions. Judging and announcement of winners.",
       },
     ],
   },
@@ -77,22 +80,37 @@ const LandingPage = () => {
     <>
       <div id="hero-section" className="relative bg-transparent">
         <div className="fixed inset-0 w-full h-screen -z-20 overflow-hidden pointer-events-none">
-          <img src="/hero_bg.png" alt="" className="w-full h-full object-cover" />
+          <img
+            src="/hero_bg.png"
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <div
           className="fixed inset-0 w-full h-screen -z-10 pointer-events-none"
           style={{
             backgroundColor: DARK_TINT_COLOR,
-            opacity: DARK_TINT_OPACITY
+            opacity: DARK_TINT_OPACITY,
           }}
         ></div>
 
-        <div className={pageState === "completed" ? "animate-[slideInFromTop_0.8s_ease-out]" : ""}><Navbar /></div>
+        <div
+          className={
+            pageState === "completed"
+              ? "animate-[slideInFromTop_0.8s_ease-out]"
+              : ""
+          }
+        >
+          <Navbar />
+        </div>
         <Hero />
       </div>
 
-      <div id="about-section" className="bg-[#050505] relative min-h-screen overflow-hidden">
+      <div
+        id="about-section"
+        className="bg-[#050505] relative min-h-screen overflow-hidden"
+      >
         {/* Subtle Static Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FDC700]/[0.02] to-transparent pointer-events-none" />
 
@@ -106,9 +124,12 @@ const LandingPage = () => {
               transition={{ duration: 0.6 }}
               className="mb-20"
             >
-              <h2 className="text-4xl md:text-6xl font-bold text-[#FDC700] mb-3 font-benguiat" style={{
-                textShadow: "0 0 20px rgba(253, 199, 0, 0.3)"
-              }}>
+              <h2
+                className="text-4xl md:text-6xl font-bold text-[#FDC700] mb-3 font-benguiat"
+                style={{
+                  textShadow: "0 0 20px rgba(253, 199, 0, 0.3)",
+                }}
+              >
                 About HackWins
               </h2>
               <div className="h-0.5 w-24 bg-[#FDC700]" />
@@ -126,33 +147,79 @@ const LandingPage = () => {
                 {/* Introduction */}
                 <div className="space-y-6">
                   <p className="text-xl md:text-2xl text-gray-100 leading-relaxed">
-                    <span className="text-[#FDC700] font-semibold">HackWins</span> is a 10-day innovation sprint organized by <span className="text-[#CE1126] font-semibold">GDG on Campus APSIT</span>, running from <span className="text-[#FDC700]">January 7-18, 2026</span>.
+                    <span className="text-[#FDC700] font-semibold">
+                      HackWins
+                    </span>{" "}
+                    is a 10-day innovation sprint organized by{" "}
+                    <span className="text-[#CE1126] font-semibold">
+                      GDG on Campus APSIT
+                    </span>
+                    , running from{" "}
+                    <span className="text-[#FDC700]">January 7-18, 2026</span>.
                   </p>
 
                   <p className="text-lg text-gray-300 leading-relaxed">
-                    This hackathon brings together passionate developers, designers, and innovators to tackle real-world challenges across three powerful domains: <span className="text-[#CE1126] font-semibold">Fintech</span>, <span className="text-[#CE1126] font-semibold">Agritech</span>, and <span className="text-[#CE1126] font-semibold">Open Innovation</span>.
+                    This hackathon brings together passionate developers,
+                    designers, and innovators to tackle real-world challenges
+                    across three powerful domains:{" "}
+                    <span className="text-[#CE1126] font-semibold">
+                      Fintech
+                    </span>
+                    ,{" "}
+                    <span className="text-[#CE1126] font-semibold">
+                      Agritech
+                    </span>
+                    , and{" "}
+                    <span className="text-[#CE1126] font-semibold">
+                      Open Innovation
+                    </span>
+                    .
                   </p>
                 </div>
 
                 {/* What Makes It Special */}
                 <div className="border-l-2 border-[#CE1126] pl-6 py-2">
-                  <h3 className="text-2xl font-bold text-white mb-4 font-benguiat">What Makes HackWins Unique</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4 font-benguiat">
+                    What Makes HackWins Unique
+                  </h3>
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start gap-3">
                       <span className="text-[#FDC700] mt-1">▸</span>
-                      <span className="text-base leading-relaxed"><strong className="text-white">Build-First Approach:</strong> Start developing from day one with clear problem statements and immediate access to resources.</span>
+                      <span className="text-base leading-relaxed">
+                        <strong className="text-white">
+                          Build-First Approach:
+                        </strong>{" "}
+                        Start developing from day one with clear problem
+                        statements and immediate access to resources.
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#FDC700] mt-1">▸</span>
-                      <span className="text-base leading-relaxed"><strong className="text-white">Expert Workshops:</strong> Hands-on sessions with Google's latest AI tools and development platforms.</span>
+                      <span className="text-base leading-relaxed">
+                        <strong className="text-white">
+                          Expert Workshops:
+                        </strong>{" "}
+                        Hands-on sessions with Google's latest AI tools and
+                        development platforms.
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#FDC700] mt-1">▸</span>
-                      <span className="text-base leading-relaxed"><strong className="text-white">Real Impact:</strong> Solutions that address genuine challenges in critical sectors.</span>
+                      <span className="text-base leading-relaxed">
+                        <strong className="text-white">Real Impact:</strong>{" "}
+                        Solutions that address genuine challenges in critical
+                        sectors.
+                      </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#FDC700] mt-1">▸</span>
-                      <span className="text-base leading-relaxed"><strong className="text-white">Collaborative Environment:</strong> Connect with like-minded innovators and industry mentors.</span>
+                      <span className="text-base leading-relaxed">
+                        <strong className="text-white">
+                          Collaborative Environment:
+                        </strong>{" "}
+                        Connect with like-minded innovators and industry
+                        mentors.
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -161,7 +228,9 @@ const LandingPage = () => {
                 <div className="pt-4">
                   <div className="flex flex-wrap gap-4">
                     <a href="/tracks">
-                      <span className="hover:underline flex items-center gap-2 text-[#FDC700]">View all tracks <ArrowRight /></span>
+                      <span className="hover:underline flex items-center gap-2 text-[#FDC700]">
+                        View all tracks <ArrowRight />
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -188,16 +257,28 @@ const LandingPage = () => {
                   {/* Stats Grid Below Image */}
                   <div className="grid grid-cols-3 gap-3">
                     <div className="bg-white/5 border border-white/10 rounded p-4 text-center">
-                      <div className="text-2xl font-bold text-[#FDC700] mb-1">10</div>
-                      <div className="text-xs text-gray-400 uppercase tracking-wide">Days</div>
+                      <div className="text-2xl font-bold text-[#FDC700] mb-1">
+                        10
+                      </div>
+                      <div className="text-xs text-gray-400 uppercase tracking-wide">
+                        Days
+                      </div>
                     </div>
                     <div className="bg-white/5 border border-white/10 rounded p-4 text-center">
-                      <div className="text-2xl font-bold text-[#CE1126] mb-1">3</div>
-                      <div className="text-xs text-gray-400 uppercase tracking-wide">Tracks</div>
+                      <div className="text-2xl font-bold text-[#CE1126] mb-1">
+                        3
+                      </div>
+                      <div className="text-xs text-gray-400 uppercase tracking-wide">
+                        Tracks
+                      </div>
                     </div>
                     <div className="bg-white/5 border border-white/10 rounded p-4 text-center">
-                      <div className="text-2xl font-bold text-[#FDC700] mb-1">∞</div>
-                      <div className="text-xs text-gray-400 uppercase tracking-wide">Ideas</div>
+                      <div className="text-2xl font-bold text-[#FDC700] mb-1">
+                        ∞
+                      </div>
+                      <div className="text-xs text-gray-400 uppercase tracking-wide">
+                        Ideas
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -207,7 +288,10 @@ const LandingPage = () => {
         </section>
       </div>
 
-      <div id="timeline" className="relative py-24 bg-[#050505] overflow-hidden">
+      <div
+        id="timeline"
+        className="relative py-24 bg-[#050505] overflow-hidden"
+      >
         {/* Ambient background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#CE1126] opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
 
@@ -241,10 +325,10 @@ const LandingPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.8 }}
-                  className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? "md:flex-row-reverse" : ""
-                    }`}
+                  className={`relative flex flex-col md:flex-row items-center ${
+                    index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  }`}
                 >
-
                   {/* Spacer for Desktop Alignment */}
                   <div className="hidden md:block md:w-1/2" />
 
@@ -255,34 +339,47 @@ const LandingPage = () => {
                   </div>
 
                   {/* Content Card */}
-                  <div className={`w-full md:w-1/2 pl-20 md:pl-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"
-                    }`}>
+                  <div
+                    className={`w-full md:w-1/2 pl-20 md:pl-0 ${
+                      index % 2 === 0
+                        ? "md:pr-16 md:text-right"
+                        : "md:pl-16 md:text-left"
+                    }`}
+                  >
                     <div className="group relative">
                       {/* Hover Connector Line (Desktop) */}
-                      <div className={`hidden md:block absolute top-6 h-px w-16 bg-[#CE1126]/30 transition-all duration-500 group-hover:w-full group-hover:bg-[#CE1126]/10 ${index % 2 === 0 ? "right-[-64px]" : "left-[-64px]"
-                        }`}></div>
+                      <div
+                        className={`hidden md:block absolute top-6 h-px w-16 bg-[#CE1126]/30 transition-all duration-500 group-hover:w-full group-hover:bg-[#CE1126]/10 ${
+                          index % 2 === 0 ? "right-[-64px]" : "left-[-64px]"
+                        }`}
+                      ></div>
 
                       <div className="relative p-6 md:p-8 rounded-lg bg-white/[0.03] border border-white/10 backdrop-blur-md hover:border-[#CE1126]/40 transition-colors duration-300 overflow-hidden">
-
                         {/* Number Indicator - Alternating Sides */}
-                        <div className={`absolute top-2 md:top-4 text-6xl font-bold font-benguiat opacity-10 select-none text-[#FDC700] ${index % 2 === 0
-                          ? "right-4" // Even Index (Left Card): Box 1 & 3 logic is usually flipped due to reverse?
-                          // Wait: index 0 is Even. Reverse row. Card is on Left. Text Right.
-                          // User wants Box 1 (Index 0) to have number on Right. 
-                          // "1 and 3 box will have number in the card on the right side"
-                          // So YES, Right side.
-                          : "right-4 md:left-4 md:right-auto" // Odd Index (Right Card): Box 2. Normal row. Card Right. Text Left.
-                          // User wants Box 2 to have number on Left.
-                          // So YES, Left side.
-                          }`}>
+                        <div
+                          className={`absolute top-2 md:top-4 text-6xl font-bold font-benguiat opacity-10 select-none text-[#FDC700] ${
+                            index % 2 === 0
+                              ? "right-4" // Even Index (Left Card): Box 1 & 3 logic is usually flipped due to reverse?
+                              : // Wait: index 0 is Even. Reverse row. Card is on Left. Text Right.
+                                // User wants Box 1 (Index 0) to have number on Right.
+                                // "1 and 3 box will have number in the card on the right side"
+                                // So YES, Right side.
+                                "right-4 md:left-4 md:right-auto" // Odd Index (Right Card): Box 2. Normal row. Card Right. Text Left.
+                            // User wants Box 2 to have number on Left.
+                            // So YES, Left side.
+                          }`}
+                        >
                           0{index + 1}
                         </div>
 
                         {/* Content Wrapper with padding to avoid number overlap */}
-                        <div className={`relative z-10 ${index % 2 === 0
-                          ? "md:mr-12" // Padding for Number on Right
-                          : "md:ml-12" // Padding for Number on Left
-                          }`}>
+                        <div
+                          className={`relative z-10 ${
+                            index % 2 === 0
+                              ? "md:mr-12" // Padding for Number on Right
+                              : "md:ml-12" // Padding for Number on Left
+                          }`}
+                        >
                           <h3 className="text-2xl md:text-3xl font-bold text-white font-benguiat mb-2">
                             {phase.title}
                           </h3>
@@ -292,10 +389,19 @@ const LandingPage = () => {
 
                           <div className="space-y-4">
                             {phase.events.map((event, i) => (
-                              <div key={i} className={`flex flex-col gap-1 ${index % 2 === 0 ? "md:items-end" : "md:items-start"}`}>
+                              <div
+                                key={i}
+                                className={`flex flex-col gap-1 ${
+                                  index % 2 === 0
+                                    ? "md:items-end"
+                                    : "md:items-start"
+                                }`}
+                              >
                                 <div className="flex items-center gap-2">
                                   <span className="w-1.5 h-1.5 rounded-full bg-[#FDC700]"></span>
-                                  <span className="text-gray-200 font-bold">{event.title}</span>
+                                  <span className="text-gray-200 font-bold">
+                                    {event.title}
+                                  </span>
                                 </div>
                                 <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
                                   {event.description}
@@ -312,9 +418,72 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
+
+        <section
+          id="register"
+          className="relative py-24 bg-[#050505] overflow-hidden"
+        >
+          {/* Soft glow background */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#CE1126]/10 to-transparent pointer-events-none" />
+
+          <div className="relative mx-auto max-w-5xl px-4 md:px-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="space-y-6"
+            >
+              <h2 className="text-4xl md:text-6xl font-bold text-[#FDC700] font-benguiat drop-shadow-[0_0_20px_rgba(253,199,0,0.35)]">
+                Ready to Enter the Arena?
+              </h2>
+
+              <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                Assemble your team, choose your track, and prepare to build
+                solutions that can redefine the future.
+                <span className="text-white font-semibold">
+                  {" "}
+                  The mission begins now.
+                </span>
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
+                <a href="/register">
+                  <Button
+                    size="lg"
+                    className="bg-[#CE1126] hover:bg-[#b90f22] text-white text-lg px-10 py-6 rounded-xl shadow-[0_0_30px_rgba(206,17,38,0.45)] transition-all duration-300 cursor-pointer"
+                  >
+                    Register Your Team
+                    <ArrowBigRightDash className="ml-2 h-6 w-6" />
+                  </Button>
+                </a>
+
+                <a
+                  href="/rules"
+                  className="text-[#FDC700] text-base flex items-center gap-2 hover:underline"
+                >
+                  View Rules & Guidelines <ArrowRight />
+                </a>
+              </div>
+
+              <p className="pt-6 text-sm text-gray-400">
+                Team size: <span className="text-white">4 members</span> • Open
+                to all departments • Online + Offline Hybrid
+              </p>
+            </motion.div>
+          </div>
+        </section>
       </div>
 
-      <div className={`bg-[#131314] ${pageState === "completed" ? "animate-[fadeInLanding_1s_ease-out_1.5s_both]" : ""}`}><Footer /></div>
+      <div
+        className={`bg-[#131314] ${
+          pageState === "completed"
+            ? "animate-[fadeInLanding_1s_ease-out_1.5s_both]"
+            : ""
+        }`}
+      >
+        <Footer />
+      </div>
     </>
   );
 };
