@@ -57,11 +57,8 @@ const Footer = () => {
               }}>
                 HackWins
               </h3>
-              <p className="text-sm leading-relaxed text-gray-300 mb-1">
-                A 10-day innovation sprint by GDG on Campus APSIT
-              </p>
-              <p className="text-xs text-[#CE1126] font-semibold mb-6">
-                January 7-18, 2026
+              <p className="mb-6 text-md italic leading-relaxed text-gray-400">
+                Build Before the Battle
               </p>
 
               {/* Social Links */}
@@ -138,7 +135,7 @@ const Footer = () => {
                 &copy; {new Date().getFullYear()} HackWins. All rights reserved.
               </p>
               <p className="text-xs text-gray-500">
-                Built with passion by <span className="text-[#CE1126]">GDG on Campus APSIT</span>
+                Built with passion by <span className="text-white">GDG on Campus APSIT</span>
               </p>
             </div>
 

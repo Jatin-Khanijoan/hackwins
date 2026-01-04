@@ -17,7 +17,7 @@ const timelineEvents = [
       {
         time: "Kickoff",
         title: "Problem Statement Reveal",
-        description: "Release of Problem Statements. Announcement of rules, timelines, and winning strategies. Teams begin building immediately.",
+        description: "Release of Problem Statements. Announcement of rules, timelines, and winning strategies.",
       },
     ],
   },
@@ -126,7 +126,7 @@ const LandingPage = () => {
                 {/* Introduction */}
                 <div className="space-y-6">
                   <p className="text-xl md:text-2xl text-gray-100 leading-relaxed">
-                    <span className="text-[#FDC700] font-semibold">HackWins</span> is a 10-day innovation sprint organized by <span className="text-[#CE1126] font-semibold">GDG on Campus APSIT</span>, running from <span className="text-[#FDC700]">January 7-18, 2026</span>.
+                    <span className="text-[#FDC700] font-semibold">HackWins</span> is a 10-day innovation sprint organized by <span className="text-[#CE1126] font-semibold">GDG on Campus APSIT</span>, running from <span className="text-[#FDC700]">January 7-19, 2026</span>.
                   </p>
 
                   <p className="text-lg text-gray-300 leading-relaxed">
@@ -279,9 +279,9 @@ const LandingPage = () => {
                         </div>
 
                         {/* Content Wrapper with padding to avoid number overlap */}
-                        <div className={`relative z-10 ${index % 2 === 0
-                          ? "md:mr-12" // Padding for Number on Right
-                          : "md:ml-12" // Padding for Number on Left
+                        <div className={`relative z-10 mr-12 ${index % 2 === 0
+                          ? "" // Even: keep mr-12 for both mobile and desktop (number on right)
+                          : "md:ml-12 md:mr-0" // Odd: switch to left padding on desktop, remove right
                           }`}>
                           <h3 className="text-2xl md:text-3xl font-bold text-white font-benguiat mb-2">
                             {phase.title}
@@ -297,7 +297,7 @@ const LandingPage = () => {
                                   <span className="w-1.5 h-1.5 rounded-full bg-[#FDC700]"></span>
                                   <span className="text-gray-200 font-bold">{event.title}</span>
                                 </div>
-                                <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+                                <p className="text-gray-200 text-sm leading-relaxed max-w-sm">
                                   {event.description}
                                 </p>
                               </div>
