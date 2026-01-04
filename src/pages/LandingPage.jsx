@@ -104,14 +104,14 @@ const LandingPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="mb-20"
+              className="mb-20 text-center lg:text-left"
             >
-              <h2 className="text-4xl md:text-6xl font-bold text-[#FDC700] mb-3 font-benguiat" style={{
+              <h2 className="text-3xl md:text-6xl font-bold text-[#FDC700] mb-3 font-benguiat" style={{
                 textShadow: "0 0 20px rgba(253, 199, 0, 0.3)"
               }}>
                 About HackWins
               </h2>
-              <div className="h-0.5 w-24 bg-[#FDC700]" />
+              <div className="h-0.5 w-24 bg-[#FDC700] mx-auto lg:mx-0" />
             </motion.div>
 
             <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
@@ -121,45 +121,45 @@ const LandingPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="lg:col-span-3 space-y-8"
+                className="lg:col-span-3 space-y-8 text-center lg:text-left"
               >
                 {/* Introduction */}
                 <div className="space-y-6">
-                  <p className="text-xl md:text-2xl text-gray-100 leading-relaxed">
+                  <p className="text-base md:text-2xl text-gray-100 leading-relaxed">
                     <span className="text-[#FDC700] font-semibold">HackWins</span> is a 10-day innovation sprint organized by <span className="text-[#CE1126] font-semibold">GDG on Campus APSIT</span>, running from <span className="text-[#FDC700]">January 7-19, 2026</span>.
                   </p>
 
-                  <p className="text-lg text-gray-300 leading-relaxed">
+                  <p className="text-sm md:text-lg text-gray-300 leading-relaxed">
                     This hackathon brings together passionate developers, designers, and innovators to tackle real-world challenges across three powerful domains: <span className="text-[#CE1126] font-semibold">Fintech</span>, <span className="text-[#CE1126] font-semibold">Agritech</span>, and <span className="text-[#CE1126] font-semibold">Open Innovation</span>.
                   </p>
                 </div>
 
                 {/* What Makes It Special */}
-                <div className="border-l-2 border-[#CE1126] pl-6 py-2">
-                  <h3 className="text-2xl font-bold text-white mb-4 font-benguiat">What Makes HackWins Unique</h3>
+                <div className="border-l-2 border-[#CE1126] pl-6 py-2 text-left">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4 font-benguiat">What Makes HackWins Unique</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start gap-3">
                       <span className="text-[#FDC700] mt-1">▸</span>
-                      <span className="text-base leading-relaxed"><strong className="text-white">Build-First Approach:</strong> Start developing from day one with clear problem statements and immediate access to resources.</span>
+                      <span className="text-sm md:text-base leading-relaxed"><strong className="text-white">Build-First Approach:</strong> Start developing from day one with clear problem statements and immediate access to resources.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#FDC700] mt-1">▸</span>
-                      <span className="text-base leading-relaxed"><strong className="text-white">Expert Workshops:</strong> Hands-on sessions with Google's latest AI tools and development platforms.</span>
+                      <span className="text-sm md:text-base leading-relaxed"><strong className="text-white">Expert Workshops:</strong> Hands-on sessions with Google's latest AI tools and development platforms.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#FDC700] mt-1">▸</span>
-                      <span className="text-base leading-relaxed"><strong className="text-white">Real Impact:</strong> Solutions that address genuine challenges in critical sectors.</span>
+                      <span className="text-sm md:text-base leading-relaxed"><strong className="text-white">Real Impact:</strong> Solutions that address genuine challenges in critical sectors.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#FDC700] mt-1">▸</span>
-                      <span className="text-base leading-relaxed"><strong className="text-white">Collaborative Environment:</strong> Connect with like-minded innovators and industry mentors.</span>
+                      <span className="text-sm md:text-base leading-relaxed"><strong className="text-white">Collaborative Environment:</strong> Connect with like-minded innovators and industry mentors.</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* Call to Action */}
                 <div className="pt-4">
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                     <a href="/tracks">
                       <span className="hover:underline flex items-center gap-2 text-[#FDC700]">View all tracks <ArrowRight /></span>
                     </a>

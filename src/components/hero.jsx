@@ -5,13 +5,13 @@ import CountdownTimer from "./countdown";
 const Hero = () => {
     return (
         <section className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 py-16 text-center md:px-6 lg:py-24">
-            <motion.img src="./gdg_dark.png" className="w-72"/>
+            <motion.img src="./gdg_dark.png" className="w-72" />
             <motion.h1 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="text-balance text-3xl font-semibold leading-tight tracking-wide md:text-4xl lg:text-5xl mt-10 text-yellow-400 font-benguiat">A signal from the other side</motion.h1>
             <motion.h2 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="text-xl leading-tight tracking-wide md:text-3xl lg:text-4xl mt-6 text-white font-benguiat relative">
                 Decipher the warning <br />
                 <div className="relative inline-flex flex-col items-center">
                     <div className="w-full h-[3px] bg-[#CE1126] shadow-[0_0_10px_rgba(206,17,38,0.8)] mb-[2px] z-20 rounded-sm"></div>
-                    <span className="starwars-outline text-[5rem] sm:text-[7rem] md:text-[9rem] font-stranger-outlined tracking-[0.05em] leading-none relative z-10 px-4">
+                    <span className="starwars-outline text-[3rem] sm:text-[7rem] md:text-[9rem] font-stranger-outlined tracking-[0.05em] leading-none relative z-10 px-4">
                         HackwinS
                     </span>
                     <div className="relative flex justify-between w-full">
