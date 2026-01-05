@@ -27,8 +27,8 @@ const socialLinks = [
 ];
 
 const contactInfo = [
-  { name: "Avanish Kasar", phone: "+91 XXXXX XXXXX" },
-  { name: "Vinayak Kundar", phone: "+91 XXXXX XXXXX" },
+  { name: "Avanish Kasar", phone: "+91 93264 66780" },
+  { name: "Vinayak Kundar", phone: "+91 96533 31831" },
 ];
 
 const legalLinks = [

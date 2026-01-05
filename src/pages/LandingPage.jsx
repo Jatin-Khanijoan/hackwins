@@ -11,7 +11,7 @@ const timelineEvents = [
   {
     day: "Phase 1",
     date: "Jan 7, 2026",
-    title: "The Breach",
+    title: "The Opening of the Gate",
     subtitle: "The Portal Opens",
     events: [
       {
@@ -23,8 +23,8 @@ const timelineEvents = [
   },
   {
     day: "Phase 2",
-    date: "Jan 12, 2026",
-    title: "The Armory",
+    date: "Jan 13, 2026",
+    title: "Inside the Upside Down",
     subtitle: "Equip yourself for the unknown",
     events: [
       {
@@ -36,8 +36,8 @@ const timelineEvents = [
   },
   {
     day: "Phase 3",
-    date: "Jan 18, 2026",
-    title: "The Final Crawl",
+    date: "Jan 19, 2026",
+    title: "The Rightside UP",
     subtitle: "The strong survive",
     events: [
       {

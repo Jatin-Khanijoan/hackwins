@@ -49,7 +49,7 @@ const Tracks = () => {
             </div>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              {trackData.map((track) => (
+              {/* {trackData.map((track) => (
                 <div
                   key={track.title}
                   className="group relative p-8 rounded-xl bg-white/[0.03] border border-white/10 backdrop-blur-md transition-all duration-300 hover:border-[#CE1126]/40 hover:-translate-y-2 hover:shadow-lg hover:shadow-[#CE1126]/10"
@@ -61,8 +61,9 @@ const Tracks = () => {
                     {track.description}
                   </p>
                 </div>
-              ))}
+              ))} */}
             </div>
+              <h1 className='text-2xl md:text-7xl font-bold text-[#FDC700] mb-4 font-benguiat drop-shadow-[0_0_15px_rgba(253,199,0,0.3)] text-center'>Will be released soon</h1>
           </div>
         </main>
 
