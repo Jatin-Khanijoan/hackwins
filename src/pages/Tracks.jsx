@@ -1,76 +1,144 @@
-import React from 'react';
-import Navbar from "@/components/navbar"; // Assuming you have a Navbar
-import Footer from "@/components/footer"; // Assuming you have a Footer
+import React, { useState } from "react";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
-// Data for the tracks. You can easily add more tracks here later.
 const trackData = [
-  // {
-  //   title: "Track 1: Celestial Innovations",
-  //   description: "Forge new constellations of technology. This track is for groundbreaking ideas that push the boundaries of what's possible.",
-  //   // You can add more properties like an icon or image later
-  // },
-  // {
-  //   title: "Track 2: Galactic Guardians",
-  //   description: "Build solutions that protect and serve our digital universe. Focus on cybersecurity, data privacy, and ethical tech.",
-  // },
+  {
+    title: "Track 1: Healthcare",
+    description:
+      "Build AI-driven solutions for diagnostics, patient care, telemedicine, mental health, and hospital optimization. From personalized treatment to efficient care delivery, shape the future of healthcare with intelligent systems.",
+    problem_statements: {
+      ps_1: {
+        title: "AI-Powered Diagnostics",
+        desc: "Develop machine learning models capable of analyzing medical images such as X-rays, MRIs, and retinal scans with the goal of enabling early detection of diseases like cancer, diabetic retinopathy, and pulmonary disorders with high accuracy, especially in resource-limited settings.",
+      },
+      ps_2: {
+        title: "Personalized Treatment & Drug Repurposing",
+        desc: "Create a Generative AI tool that analyzes patient-specific data such as genomics, vitals, and electronic health records (EHRs) to suggest optimal drug dosages and identify existing drugs for new therapeutic applications, with the goal of improving treatment effectiveness while reducing trial-and-error in healthcare.",
+      },
+      ps_3: {
+        title: "Mental Health Companion",
+        desc: "Build a conversational AI system that provides immediate, non-judgmental emotional support, delivers CBT-based exercises, generates personalized mental wellness plans, and escalates high-risk cases to human professionals.",
+      },
+      ps_4: {
+        title: "Hospital Workflow Optimization",
+        desc: "Design an AI-driven system to predict patient inflow and outflow, optimize surgery schedules, and manage pharmacy inventory efficiently.",
+      },
+    },
+  },
+  {
+    title: "Track 2: FinTech",
+    description:
+      "Build intelligent solutions for fraud prevention, smart investing, regulatory compliance, and financial inclusion. Make finance safer, smarter, and more accessible.",
+    problem_statements: {
+      ps_1: {
+        title: "Generative Investment Strategies",
+        desc: "Develop a Generative AI model that analyzes financial news, market sentiment, and macroeconomic indicators to generate adaptive investment strategies.",
+      },
+      ps_2: {
+        title: "AI-Powered Compliance (RegTech)",
+        desc: "Build an NLP-based system that summarizes financial regulations and flags compliance gaps automatically.",
+      },
+      ps_3: {
+        title: "Financial Inclusion for the Underserved",
+        desc: "Create alternative credit scoring models using non-traditional data sources.",
+      },
+      ps_4: {
+        title: "Real-Time Fraud Detection",
+        desc: "Design a deep learning model for ultra-low latency anomaly detection in transaction streams.",
+      },
+    },
+  },
+  {
+    title: "Track 3: Open Innovation",
+    description:
+      "Open Innovation invites teams to build creative, cross-domain solutions without industry constraints. This track emphasizes originality, scalability, and real-world impact, encouraging participants to leverage emerging technologies to solve challenges in society, sustainability, education, governance, smart cities, and beyond.",
+  },
 ];
 
 const Tracks = () => {
-  const DARK_TINT_OPACITY = 0.8;
-  const DARK_TINT_COLOR = "rgb(0, 0, 0)";
+  const [openTrack, setOpenTrack] = useState(null);
+
+  const toggleTrack = (index) => {
+    setOpenTrack(openTrack === index ? null : index);
+  };
 
   return (
     <>
-      <div className="fixed inset-0 w-full h-screen -z-20 overflow-hidden pointer-events-none">
+      <div className="fixed inset-0 -z-20">
         <img src="/hero_bg.png" alt="" className="w-full h-full object-cover" />
       </div>
 
-      <div
-        className="fixed inset-0 w-full h-screen -z-10 pointer-events-none"
-        style={{
-          backgroundColor: DARK_TINT_COLOR,
-          opacity: DARK_TINT_OPACITY
-        }}
-      ></div>
+      <div className="fixed inset-0 -z-10 bg-black/80" />
 
-      <div className="relative z-10 flex min-h-screen flex-col bg-transparent text-white">
+      <div className="relative z-10 min-h-screen flex flex-col text-white">
         <Navbar />
 
-        <main className="flex-grow min-h-screen">
-          <div className="mx-auto max-w-7xl px-4 py-24 sm:py-32">
+        <main className="flex-grow">
+          <div className="max-w-7xl mx-auto px-4 py-24">
             <div className="text-center mb-16">
-              <h1 className="text-2xl md:text-2xl font-bold text-[#FDC700] mb-4 font-benguiat drop-shadow-[0_0_15px_rgba(253,199,0,0.3)]">
+              <h1 className="text-2xl font-bold text-[#FDC700] font-benguiat mb-4">
                 Choose Your Track
               </h1>
-              {/* <p className="text-xl text-gray-300 font-benguiat mt-4">
-                The Rift is Opening. 10 Days to Solve. 1 Vision to Save the Future.
-              </p> */}
-              <div className="h-0.5 w-32 bg-[#CE1126] mx-auto box-border mt-6" />
+              <div className="h-0.5 w-32 bg-[#CE1126] mx-auto" />
             </div>
 
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              {/* {trackData.map((track) => (
+            <div className="grid gap-8 md:grid-cols-3">
+              {trackData.map((track, index) => (
                 <div
                   key={track.title}
-                  className="group relative p-8 rounded-xl bg-white/[0.03] border border-white/10 backdrop-blur-md transition-all duration-300 hover:border-[#CE1126]/40 hover:-translate-y-2 hover:shadow-lg hover:shadow-[#CE1126]/10"
+                  className="rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-8"
                 >
-                  <h2 className="mb-4 font-benguiat text-2xl font-bold text-white group-hover:text-[#FDC700] transition-colors">
+                  <h2 className="text-2xl font-bold mb-4 text-[#FDC700]">
                     {track.title}
                   </h2>
-                  <p className="text-gray-300 leading-relaxed">
+
+                  <p className="text-gray-300 mb-6 leading-relaxed">
                     {track.description}
                   </p>
+
+                  {track.problem_statements && (
+                    <>
+                      <button
+                        onClick={() => toggleTrack(index)}
+                        className="text-sm text-[#FDC700] hover:underline"
+                      >
+                        {openTrack === index
+                          ? "Hide Problem Statements ▲"
+                          : "View Problem Statements ▼"}
+                      </button>
+
+                      {openTrack === index && (
+                        <div className="mt-6 space-y-4">
+                          {Object.values(track.problem_statements).map(
+                            (ps, idx) => (
+                              <div
+                                key={idx}
+                                className="p-4 rounded-lg bg-black/30 border border-white/10"
+                              >
+                                <h3 className="font-semibold text-[#FDC700] mb-2">
+                                  {ps.title}
+                                </h3>
+                                <p className="text-sm text-gray-300">
+                                  {ps.desc}
+                                </p>
+                              </div>
+                            )
+                          )}
+                        </div>
+                      )}
+                    </>
+                  )}
                 </div>
-              ))} */}
+              ))}
             </div>
-              <h1 className='text-2xl md:text-7xl font-bold text-[#FDC700] mb-4 font-benguiat drop-shadow-[0_0_15px_rgba(253,199,0,0.3)] text-center'>Will be released soon</h1>
           </div>
         </main>
 
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Tracks;
