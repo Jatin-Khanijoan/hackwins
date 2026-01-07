@@ -130,7 +130,7 @@ const LandingPage = () => {
                   </p>
 
                   <p className="text-sm md:text-lg text-gray-300 leading-relaxed">
-                    This hackathon brings together passionate developers, designers, and innovators to tackle real-world challenges across three powerful domains: <span className="text-[#CE1126] font-semibold">Fintech</span>, <span className="text-[#CE1126] font-semibold">Agritech</span>, and <span className="text-[#CE1126] font-semibold">Open Innovation</span>.
+                    This hackathon brings together passionate developers, designers, and innovators to tackle real-world challenges across three powerful domains: <span className="text-[#CE1126] font-semibold">HealthTech</span>, <span className="text-[#CE1126] font-semibold">FinTech</span>, and <span className="text-[#CE1126] font-semibold">Open Innovation</span>.
                   </p>
                 </div>
 
