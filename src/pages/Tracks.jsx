@@ -10,19 +10,19 @@ const trackData = [
     problem_statements: {
       ps_1: {
         title: "AI-Powered Diagnostics",
-        desc: "Develop machine learning models capable of analyzing medical images such as X-rays, MRIs, and retinal scans with the goal of enabling early detection of diseases like cancer, diabetic retinopathy, and pulmonary disorders with high accuracy, especially in resource-limited settings.",
+        desc: "Healthcare systems generate vast amounts of medical imaging data, yet early and accurate diagnosis remains a challenge particularly in resource-constrained settings. This challenge invites innovators to explore how AI can enhance the interpretation of X-rays, MRIs, and retinal scans to support clinicians in achieving faster, more reliable, and widely accessible disease detection.",
       },
       ps_2: {
         title: "Personalized Treatment & Drug Repurposing",
-        desc: "Create a Generative AI tool that analyzes patient-specific data such as genomics, vitals, and electronic health records (EHRs) to suggest optimal drug dosages and identify existing drugs for new therapeutic applications, with the goal of improving treatment effectiveness while reducing trial-and-error in healthcare.",
+        desc: "As medicine shifts toward personalized care, effectively leveraging complex patient data continues to be a major hurdle. This challenge focuses on using Generative AI to synthesize genomics, vitals, and electronic health records to guide individualized treatment decisions and uncover new therapeutic applications for existing drugs, improving outcomes while reducing trial-and-error.",
       },
       ps_3: {
         title: "Mental Health Companion",
-        desc: "Build a conversational AI system that provides immediate, non-judgmental emotional support, delivers CBT-based exercises, generates personalized mental wellness plans, and escalates high-risk cases to human professionals.",
+        desc: "Access to timely and stigma-free mental health support remains limited for many individuals. This challenge encourages the design of empathetic AI companions that can provide immediate emotional support, promote evidence-based mental wellness practices, personalize care journeys, and responsibly collaborate with human professionals when higher-risk situations arise.",
       },
       ps_4: {
         title: "Hospital Workflow Optimization",
-        desc: "Design an AI-driven system to predict patient inflow and outflow, optimize surgery schedules, and manage pharmacy inventory efficiently.",
+        desc: "Hospitals face increasing operational strain due to unpredictable patient flow, limited resources, and complex scheduling demands. This challenge explores how AI can be leveraged to anticipate patient inflow and outflow, optimize surgical schedules, and manage pharmacy inventory, enabling more efficient, resilient, and patient-centric healthcare operations.",
       },
     },
   },
@@ -33,19 +33,19 @@ const trackData = [
     problem_statements: {
       ps_1: {
         title: "Generative Investment Strategies",
-        desc: "Develop a Generative AI model that analyzes financial news, market sentiment, and macroeconomic indicators to generate adaptive investment strategies.",
+        desc: "Financial markets are shaped by rapidly changing information, sentiment, and macroeconomic signals, making traditional investment approaches increasingly reactive. This challenge invites innovators to explore how Generative AI can synthesize financial news, market sentiment, and economic indicators to produce adaptive, explainable, and forward-looking investment strategies.",
       },
       ps_2: {
         title: "AI-Powered Compliance (RegTech)",
-        desc: "Build an NLP-based system that summarizes financial regulations and flags compliance gaps automatically.",
+        desc: "The growing volume and complexity of financial regulations create significant compliance burdens for institutions. This challenge focuses on leveraging NLP and AI to transform regulatory texts into actionable insights, enabling automated summarization, continuous monitoring, and early identification of potential compliance gaps.",
       },
       ps_3: {
         title: "Financial Inclusion for the Underserved",
-        desc: "Create alternative credit scoring models using non-traditional data sources.",
+        desc: "Millions remain excluded from formal financial systems due to the lack of traditional credit histories. This challenge encourages the exploration of AI-driven alternative credit assessment methods that responsibly use non-traditional data sources to expand access to financial services while ensuring fairness and transparency.",
       },
       ps_4: {
         title: "Real-Time Fraud Detection",
-        desc: "Design a deep learning model for ultra-low latency anomaly detection in transaction streams.",
+        desc: "As digital transactions grow in scale and speed, detecting fraudulent activity in real time becomes increasingly critical. This challenge examines how deep learning can be applied to high-velocity transaction streams to identify anomalies with ultra-low latency, balancing accuracy, scalability, and trust.",
       },
     },
   },
@@ -104,8 +104,8 @@ const Tracks = () => {
                         className="text-sm text-[#FDC700] hover:underline"
                       >
                         {openTrack === index
-                          ? "Hide Problem Statements ▲"
-                          : "View Problem Statements ▼"}
+                          ? "Hide Challenges ▲"
+                          : "View Challenges ▼"}
                       </button>
 
                       {openTrack === index && (
