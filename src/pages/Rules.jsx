@@ -104,7 +104,7 @@ const rulesData = [
     points: [
       {
         label: "Final Submission",
-        text: "Last date for submission is 12:00 PM, 18th January.",
+        text: "Last date for submission is 12:00 PM, 17th January.",
       },
       {
         label: "Late Submissions",
