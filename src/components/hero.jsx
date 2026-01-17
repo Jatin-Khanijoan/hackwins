@@ -60,40 +60,14 @@ const Hero = () => {
         The gate is open
       </motion.h3>
 
-      <CountdownTimer />
-      <Link
-        to={
-          "https://vision.hack2skill.com/event/gdgoc-25-gdgapsit?utm_source=hack2skill&utm_medium=homepage&sectionid=694bdedafd4bb77e2c71502f"
-        }
+      <motion.h3
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="text-balance text-lg font-medium leading-relaxed tracking-wide md:text-2xl lg:text-3xl mt-4 text-yellow-400 font-benguiat"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mt-10"
-        >
-          <Button
-            className="group relative overflow-hidden bg-black px-12 py-8 transition-all duration-300 
-                   border-2 border-red-900/50 
-                   hover:border-red-600 hover:bg-[#0f0000] 
-                   font-benguiat"
-            style={{
-              boxShadow: "inset 0 0 15px rgba(206, 17, 38, 0.2)",
-            }}
-          >
-            {/* Subtle Red Gradient Overlay on Hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-red-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-            {/* The Text */}
-            <span className="relative z-10 text-xl md:text-2xl font-bold uppercase tracking-widest text-[#FDC700] drop-shadow-[0_0_10px_rgba(253,199,0,0.3)] group-hover:text-white transition-colors duration-300">
-              Register
-            </span>
-
-            {/* Flickering Red Neon Line at bottom on Hover */}
-            <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 shadow-[0_0_15px_rgba(239,68,68,0.8)] transition-all duration-500 group-hover:w-full" />
-          </Button>
-        </motion.div>
-      </Link>
+        Evaluations going on...
+      </motion.h3>
     </section>
   );
 };
