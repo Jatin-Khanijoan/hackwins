@@ -66,7 +66,7 @@ const Hero = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-balance text-lg font-medium leading-relaxed tracking-wide md:text-2xl lg:text-3xl mt-4 text-yellow-400 font-benguiat"
       >
-        Evaluations going on...
+        Demo and Presentations day
       </motion.h3>
     </section>
   );
